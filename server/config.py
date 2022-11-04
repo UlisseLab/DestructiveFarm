@@ -15,8 +15,8 @@ CONFIG = {
 
     'SYSTEM_PROTOCOL': 'netcat',
     'ATTACK_INFO_ENDPOINT': "https://bambi7.enoflag.de/scoreboard/attack.json",
-    # 'SYSTEM_HOST': '127.0.0.1',
-    # 'SYSTEM_PORT': 31337,
+    'SYSTEM_HOST': '10.0.13.37',
+    'SYSTEM_PORT': 1337,
     # 'TEAM_TOKEN': 'your_secret_token',
 
     # The server will submit not more than SUBMIT_FLAG_LIMIT flags
