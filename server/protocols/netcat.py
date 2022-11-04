@@ -17,7 +17,7 @@ def submit_flags(flags: list[Flag], config):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 
         sock.connect((config["SYSTEM_HOST"], config["SYSTEM_PORT"]))
-        
+
         for item in flags:
             sock.send(item.flag.encode())
             response = sock.recv(4096).decode(errors="ignore").lower()
@@ -37,12 +37,9 @@ def submit_flags(flags: list[Flag], config):
 
 def get_teams(config):
     attack_info = get_attack_info(config)
-    if "teams" not in attack_info:
-        return {}
+    teams = attack_info["availableTeams"]
 
-    teams = attack_info["teams"]
-
-    return {obj["name"]: obj["ip"] for obj in teams}
+    return {t: t for t in teams}
 
 
 def get_attack_info(config):

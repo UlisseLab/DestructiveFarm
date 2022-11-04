@@ -5,7 +5,7 @@ CONFIG = {
     # fetch FLAG_FORMAT from sploits' stdout.
 
     # WARNING: THIS IS A FALLBACK DICTIONARY IF THE PROTOCOL DOES NOT PROVIDE UPDATED TEAMS.
-    'TEAMS': {'Team #{}'.format(i): '10.0.0.{}'.format(i) for i in range(1, 29 + 1)},
+    'TEAMS': {'Team #{}'.format(i): '10.1.{}.1'.format(i) for i in range(1, 100)},
 
         
     'FLAG_FORMAT': r'[a-zA-Z0-9]{31}=',
@@ -13,8 +13,8 @@ CONFIG = {
     # This configures how and where to submit flags.
     # The protocol must be a module in protocols/ directory.
 
-    'SYSTEM_PROTOCOL': 'dummy',
-    # 'ATTACK_INFO_ENDPOINT': "http://#FIXME",
+    'SYSTEM_PROTOCOL': 'netcat',
+    'ATTACK_INFO_ENDPOINT': "https://bambi7.enoflag.de/scoreboard/attack.json",
     # 'SYSTEM_HOST': '127.0.0.1',
     # 'SYSTEM_PORT': 31337,
     # 'TEAM_TOKEN': 'your_secret_token',
