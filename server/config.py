@@ -8,7 +8,7 @@ CONFIG = {
     'TEAMS': {'Team #{}'.format(i): '10.1.{}.1'.format(i) for i in range(1, 100)},
 
         
-    'FLAG_FORMAT': r'[a-zA-Z0-9]{31}=',
+    'FLAG_FORMAT': r'ENO[A-Za-z0-9+\/=]{48}',
 
     # This configures how and where to submit flags.
     # The protocol must be a module in protocols/ directory.
